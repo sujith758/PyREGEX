@@ -1,0 +1,11 @@
+import re
+#Without using boundary matches
+text = "The doctor is a person who looks after the sick people and prescribes medicines so that the patient recovers fast. In order to become a doctor, a person has to study medicine. Doctors lead a hard life. Their life is very busy. They get up early in the morning and go to the hospital. They work without taking a break. They always remain polite so that patients feel comfortable with them. Since doctors work so hard we must realise their value."
+pattern = re.findall(r"and|or|the", text)
+print(pattern)
+
+#same text using boundary matches
+text = "The doctor is a person who looks after the sick people and prescribes medicines so that the patient recovers fast. In order to become a doctor, a person has to study medicine. Doctors lead a hard life. Their life is very busy. They get up early in the morning and go to the hospital. They work without taking a break. They always remain polite so that patients feel comfortable with them. Since doctors work so hard we must realise their value."
+pattern = re.findall(r"\b(and|or|the)\b", text)
+print(pattern)
+
